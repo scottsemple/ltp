@@ -34,22 +34,4 @@ while response != "bye".upcase
 	response = gets.chomp
 end
 
-puts ("No, not since the year #{rand(1951).to_s}!")
-
-## Deaf Grandma Extended
-
-puts "Thanks for coming, son!"
-
-response = gets.chomp
-bye_counter = 0
-while bye_counter <= 3
-	puts "HUH?! SPEAK UP, SONNY!"
-	response = gets.chomp
-	if response = "bye".upcase
-		bye_counter = bye_counter + 1
-	end
-end
-
-puts bye_counter.to_s
-
-puts ("See you later!")
+puts ("No, not since the year #{rand(1930..1950).to_s}!")
