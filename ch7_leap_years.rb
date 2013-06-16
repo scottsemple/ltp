@@ -15,11 +15,11 @@ if year % 4 == 0
   if year % 100 == 0
   	year += 4
   end
-  puts year
 else
   year = (start_year / 4 * 4) + 4
-  puts year
 end
+
+puts year
 
 while true
   year += 4
