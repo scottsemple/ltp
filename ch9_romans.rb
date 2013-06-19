@@ -14,10 +14,11 @@ def old_roman_numeral number
 
 	roman_numeral = ("M" * m) + ("D" * d) + ("C" * c) + ("L" * l) + ("X" * x) + ("V" * v) + ("I" * i)
 
+	# TESTS:
 	# 4667 = MMMMDCLXVII
 	# 4600 = MMMMDC
 	# 56 = LVI
 
 end
 
-puts old_roman_numeral(4600)
+puts old_roman_numeral(4667)
