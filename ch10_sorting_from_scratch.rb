@@ -1,6 +1,6 @@
 # CHAPTER 10
 
-## Sorting via recursion
+## Sorting via recursion (Written from scratch to see if I can remember how this works)
 
 # So, we want to sort an array of words, and we know how to find out which of two words comes first
 # in the dictionary (using <).
@@ -39,7 +39,7 @@ def rec_sort submitted, sorted        # The parameter arrays correspond to [arr]
                                       # until it finds the smallest word in the array. Then it pushes that word to [sorted]
                                       # and starts over, looking for the next smallest word.)
     else
-      unsorted.push tested_word       # Otherwise, if [tested_word] is bigger than [smallest],
+      unsorted.push tested_word       # Otherwise, (if [tested_word] is bigger than [smallest]),
                                       # add [tested_word] to the end of [unsorted], because we know it isn't the
                                       # smallest.
     end

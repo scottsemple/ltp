@@ -1,18 +1,6 @@
 # CHAPTER 10
 
-## Sorting via recursion
-
-# So, we want to sort an array of words, and we know how to find out which of two words comes first
-# in the dictionary (using <).
-# The easiest way to do this is to keep two more lists around: one will be our list of sorted words,
-#  and the other will be our list of unsorted words.
-# We’ll take our list of words, find the “smallest” word
-# (that is, the word that would come first in the dictionary), and stick it at the end of the sorted list.
-# All of the other words go into the unsorted list.
-# Then you do the same thing again but using the unsorted list instead of your submitted list:
-#  > Find the smallest word, move it to the sorted list, and move the rest to the unsorted list.
-#  > Keep going until your unsorted list is empty.
-# With the recursion, you might need a wrapper method, a tiny method that wraps up another method.
+## Dictionary sort
 
 def sort arr                          # This wraps rec_sort so that we don't have to always supply [] as a destination array
                                       # for the sorted list. It saves remembering to pass the empty array.
@@ -32,7 +20,7 @@ def rec_sort submitted, sorted        # The parameter arrays correspond to [arr]
                                       # empty?
 
   submitted.each do |tested_word|     # For each word in the [submitted] array:
-    if tested_word < smallest         # SAMPLE: If 'bat' is smaller than 'can' ([smallest])
+    if tested_word.downcase < smallest.downcase # SAMPLE: If 'bat' is smaller than 'can' ([smallest])
       unsorted.push smallest          # add 'can' to the end of [unsorted]
       smallest = tested_word          # and change [smallest] to 'bat'.
                                       # (So this is what cycles through [submitted] and tests each word
