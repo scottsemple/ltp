@@ -1,14 +1,3 @@
-def spank (age)
-  count = age
-  if count == 0
-    puts "OUCH!"
-  elsif count != 0
-    puts "SPANK"
-    count -= 1
-  end
-  spank(count)
-end
-
 puts
 puts "What year were you born in?"
 year = gets.chomp
@@ -23,4 +12,11 @@ age = Time.now - Time.local(year, month, day)
 
 puts "That makes you #{age.to_i / 31_557_600} years old."
 
-spank(age.to_i)
+count = age.to_i / 31_557_600
+
+while count > 0
+    puts "SPANK"
+    count -= 1
+end
+
+puts "OUCH! That's old!"
